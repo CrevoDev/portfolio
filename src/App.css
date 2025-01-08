@@ -5,6 +5,10 @@ body {
   box-sizing: border-box;
   background-color: #f4f4f4;
   color: #333;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -24,10 +28,14 @@ nav a {
 section {
   padding: 20px;
   margin: 20px auto;
-  max-width: 800px;
+  width: 75%;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer {
@@ -35,4 +43,59 @@ footer {
   padding: 10px;
   background-color: #333;
   color: white;
+  margin-top: auto;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.contact-link a {
+  margin-left: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 0 5px;
+  }
+
+  section {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-link a {
+    margin-left: 0;
+  }
 }
