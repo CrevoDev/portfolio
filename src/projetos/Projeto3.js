@@ -4,7 +4,6 @@ import './Projeto.css'; // Adicionado
 function Projeto3() {
   return (
     <div className="project-container">
-      <button onClick={() => window.location.href = '/portfolio/'}>Voltar para Início</button>
       <h2>Solução de IA para Análise de PDFs</h2>
       <p>
         Trabalhei em um projeto que visava facilitar e otimizar a entrega de dados classificados, que até então eram feitos manualmente. Esse processo era demorado e sensível, muitas vezes resultando na ausência de campos classificados corretamente. Observando essa complexidade e o trabalho envolvido, eu e minha equipe tivemos a ideia de automatizar e otimizar todo esse processo.

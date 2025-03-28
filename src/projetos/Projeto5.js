@@ -4,7 +4,6 @@ import './Projeto.css'; // Adicionado
 function Projeto5() {
   return (
     <div className="project-container">
-      <button onClick={() => window.location.href = '/portfolio/'}>Voltar para Início</button>
       <h2>Chat em NestJS com Banco Relacional e WebSocket</h2>
       <p>
         Desenvolvi um chat utilizando NestJS, com banco de dados relacional, com o objetivo de aprender e aplicar WebSocket, NestJS e TypeORM. Após criar meu chat pessoal, implementei essa versão na plataforma Correspondente, onde trabalho, melhorando significativamente a comunicação entre os usuários.

@@ -1,6 +1,5 @@
 .project-container {
     padding: 20px;
-    margin: 20px auto;
     width: 75%;
     background-color: white;
     border-radius: 8px;
@@ -46,22 +45,4 @@
     .project-container ul li {
         margin-bottom: 5px;
     }
-}
-
-/* Estilos para o botão "Voltar para Início" */
-.project-container button {
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: flex-start;
-}
-
-.project-container button:hover {
-    background-color: #0056b3;
 }

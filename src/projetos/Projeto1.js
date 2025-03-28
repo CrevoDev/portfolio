@@ -4,7 +4,6 @@ import './Projeto.css'; // Adicionado
 function Projeto1() {
     return (
         <div className="project-container">
-            <button onClick={() => window.location.href = '/portfolio/'}>Voltar para Início</button>
             <h2>Otimização de Relatórios</h2>
             <p>
                 Trabalhei na otimização da geração de relatórios da plataforma, buscando:

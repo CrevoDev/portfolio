@@ -4,7 +4,6 @@ import './Projeto.css'; // Adicionado
 function Projeto6() {
   return (
     <div className="project-container">
-      <button onClick={() => window.location.href = '/portfolio/'}>Voltar para Início</button>
       <h2>Desenvolvimento Mobile com Dart</h2>
       <p>
         Buscando aprender sobre desenvolvimento mobile e atendendo a uma necessidade pessoal, desenvolvi uma aplicação de lista de mercados utilizando Dart. O objetivo principal era gerir melhor minhas compras, garantindo que todos os itens necessários fossem adquiridos sem ultrapassar o orçamento.

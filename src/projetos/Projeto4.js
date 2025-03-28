@@ -4,7 +4,6 @@ import './Projeto.css'; // Adicionado
 function Projeto4() {
   return (
     <div className="project-container">
-      <button onClick={() => window.location.href = '/portfolio/'}>Voltar para Início</button>
       <h2>Extensões de Navegador</h2>
       <p>
         Eu e minha equipe trabalhamos na melhoria de uma extensão existente, tornando-a mais otimizada tanto esteticamente quanto tecnicamente. A extensão foi projetada para gerar scripts de automação no console do DevTools do navegador, com o objetivo de preencher campos de formulários automaticamente. Isso visava reduzir o tempo de entrega dos dados preenchidos, melhorando o fluxo de trabalho e automatizando um processo que era demorado e repetitivo.

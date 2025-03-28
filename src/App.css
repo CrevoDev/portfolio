@@ -1,37 +1,44 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
-  color: #333;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
 header {
-  background-color: #007bff;
-  color: white;
+  background-color: #4a90e2; /* Soft blue */
+  color: #f9f9f9; /* Light neutral */
   padding: 20px;
   text-align: center;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 24px;
+  width: 100%;
+  background-color: #f5f5f5; /* Light gray */
+  padding: 20px 0;
 }
 
 nav a {
-  margin: 0 10px;
-  color: white;
+  margin: 0 12px;
+  color: #f9f9f9;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d1e8ff; /* Softer blue */
 }
 
 section {
-  padding: 20px;
-  margin: 20px auto;
-  width: 75%;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 85%;
+  background-color: #ffffff; /* White */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -40,62 +47,156 @@ section {
 
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+  padding: 12px;
+  background-color: #333333; /* Dark gray */
+  color: #f9f9f9;
   margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.about-me p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #333333; /* Dark gray */
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  width: 100%;
 }
 
 .contact-link {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .contact-link a {
-  margin-left: 10px;
-  color: #007bff;
+  margin-left: 12px;
+  color: #4a90e2; /* Soft blue */
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .contact-link a:hover {
-  text-decoration: underline;
+  color: #2a6fb0; /* Slightly darker blue */
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 14px;
+    margin: 0;
+    padding: 0;
   }
 
   header {
-    padding: 10px;
+    padding: 16px;
+    font-size: 1rem;
   }
 
   nav a {
-    margin: 0 5px;
+    margin: 0 6px;
+    font-size: 0.9rem;
   }
 
   section {
-    width: 90%;
-    padding: 10px;
+    width: 95%;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-me p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .projects-container {
+    gap: 24px;
+  }
+
+  .project {
+    flex-direction: column;
+    width: 100% !important;
+    gap: 16px;
+    opacity: 1;
+    transform: none; /* No animation */
+    transition: none; /* Disable transitions */
+  }
+
+  .project > * {
+    margin: 0;
+    padding: 12px;
   }
 
   .contact-link {
-    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .contact-link a {
     margin-left: 0;
+    font-size: 0.9rem;
   }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.left {
+  flex-direction: row;
+  transform: translateX(20px); /* Start slightly off-screen to the right */
+  & > * {
+    background-color: #eaf4fc; /* Very light blue */
+  }
+}
+
+.project.right {
+  margin-left: auto;
+  transform: translateX(-20px); /* Start slightly off-screen to the left */
+  & > * {
+    background-color: #f9f9f9; /* Light neutral */
+  }
+}
+
+.project > * {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateX(0); /* Slide into place */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Default hidden state */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
