@@ -4,7 +4,10 @@ import './Projeto.css'; // Adicionado
 function Projeto5() {
   return (
     <div className="project-container">
-      <h2>Chat em NestJS com Banco Relacional e WebSocket</h2>
+      <h2>
+        <span role="img" aria-label="chat">💬</span>{' '}
+        Chat em NestJS com Banco Relacional e WebSocket
+      </h2>
       <p>
         Desenvolvi um chat utilizando NestJS, com banco de dados relacional, com o objetivo de aprender e aplicar WebSocket, NestJS e TypeORM. Após criar meu chat pessoal, implementei essa versão na plataforma Correspondente, onde trabalho, melhorando significativamente a comunicação entre os usuários.
       </p>

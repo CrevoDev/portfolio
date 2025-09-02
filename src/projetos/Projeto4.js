@@ -4,7 +4,10 @@ import './Projeto.css'; // Adicionado
 function Projeto4() {
   return (
     <div className="project-container">
-      <h2>Extensões de Navegador</h2>
+      <h2>
+        <span role="img" aria-label="Extensão de Navegador" style={{ marginRight: '8px' }}>🧩</span>
+        Extensões de Navegador
+      </h2>
       <p>
         Eu e minha equipe trabalhamos na melhoria de uma extensão existente, tornando-a mais otimizada tanto esteticamente quanto tecnicamente. A extensão foi projetada para gerar scripts de automação no console do DevTools do navegador, com o objetivo de preencher campos de formulários automaticamente. Isso visava reduzir o tempo de entrega dos dados preenchidos, melhorando o fluxo de trabalho e automatizando um processo que era demorado e repetitivo.
       </p>

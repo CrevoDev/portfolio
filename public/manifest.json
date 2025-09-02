@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cleverson Portfólio",
+  "name": "Portfólio de Cleverson - Projetos e Experiência",
+  "description": "Portfólio profissional de Cleverson, apresentando projetos de tecnologia, soluções em IA, automações e integrações inovadoras.",
   "icons": [
     {
       "src": "favicon.ico",

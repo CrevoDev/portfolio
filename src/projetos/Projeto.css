@@ -1,45 +1,155 @@
+/* Tema escuro e visual dev */
+h2 {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: #4ac9be;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 12px #4ac9be33;
+    margin-bottom: 0.5em;
+}
+
 .project-container {
-    padding: 20px;
+    padding: 28px 32px;
     width: 75%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #23272fee;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #00000044;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid #30363d;
+    margin: 0 auto 24px auto;
+    transition: background 0.22s, box-shadow 0.22s;
+}
+
+.project-body.glow-spiral::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 3px;
+    /* largura da borda */
+    background: conic-gradient(from 0deg, #4ac9be 0deg 60deg,
+            transparent 60deg 120deg,
+            #4ac9be 120deg 180deg,
+            transparent 180deg 240deg,
+            #4ac9be 240deg 300deg,
+            transparent 300deg 360deg);
+
+    /* Faz o gradiente aparecer só na borda */
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: sweep 2s linear infinite;
 }
 
 .project-container h2 {
-    color: #007bff;
+    color: #4ac9be;
 }
 
 .project-container p,
 .project-container ul {
-    color: #333;
+    color: #e6edf3;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 0.5em;
 }
 
 .project-container ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 28px;
 }
 
 .project-container ul li {
     margin-bottom: 10px;
+    color: #b6c2d1;
+    font-size: 1.02rem;
+    letter-spacing: 0.01em;
 }
 
-@media (max-width: 768px) {
-    .project-container {
-        width: 90%;
-        padding: 10px;
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0
     }
 
-    .project-container h2 {
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #4ac9be
+    }
+}
+
+/* Use .typing em h2, p, li para efeito de digitação */
+.typing {
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    border-right: 2px solid #4ac9be;
+    /* width: 0; */
+    animation:
+        typing 2.2s steps(40, end) 0.2s 1 normal both,
+        blink 0.7s step-end infinite;
+}
+
+/* Para textos menores (ex: li), use steps menor */
+.typing-short {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #4ac9be;
+    width: 0;
+    animation:
+        typing 1.2s steps(20, end) 0.2s 1 normal both,
+        blink 0.7s step-end infinite;
+}
+
+@media (max-width: 900px) {
+    .project-container {
+        width: 95%;
+        padding: 16px 8px;
+    }
+
+    h2 {
         font-size: 1.5em;
     }
 
     .project-container p,
     .project-container ul {
         font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        width: 99%;
+        padding: 10px 4px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .project-container p,
+    .project-container ul {
+        font-size: 0.97em;
     }
 
     .project-container ul li {

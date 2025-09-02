@@ -4,7 +4,10 @@ import './Projeto.css'; // Adicionado
 function Projeto6() {
   return (
     <div className="project-container">
-      <h2>Desenvolvimento Mobile com Dart</h2>
+      <h2>
+        <span role="img" aria-label="mobile app" style={{ marginRight: '8px' }}>📱</span>
+        Desenvolvimento Mobile com Dart
+      </h2>
       <p>
         Buscando aprender sobre desenvolvimento mobile e atendendo a uma necessidade pessoal, desenvolvi uma aplicação de lista de mercados utilizando Dart. O objetivo principal era gerir melhor minhas compras, garantindo que todos os itens necessários fossem adquiridos sem ultrapassar o orçamento.
       </p>

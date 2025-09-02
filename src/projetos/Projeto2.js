@@ -4,7 +4,10 @@ import './Projeto.css'; // Adicionado
 function Projeto2() {
   return (
     <div className="project-container">
-      <h2>Modernização de Sistema Legado</h2>
+      <h2>
+        <span role="img" aria-label="Engrenagem" style={{ marginRight: '8px' }}>⚙️</span>
+        Modernização de Sistema Legado
+      </h2>
       <p>
         Trabalhei como desenvolvedor independente na modernização de um sistema legado. O projeto envolveu a gestão completa do desenvolvimento, desde a análise inicial até a implementação final. Meu objetivo principal foi criar uma estrutura mais limpa, eficiente e com menos bugs, além de reduzir custos operacionais.
       </p>
