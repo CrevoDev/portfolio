@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# 💼 Portfólio - Cleverson Domingues Pedroso
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+</div>
 
-## Available Scripts
+## 🚀 Sobre o Projeto
 
-In the project directory, you can run:
+Portfólio pessoal desenvolvido em React, apresentando minha jornada como desenvolvedor fullstack, desenvolvedor com Inteligência Artificial e engenheiro de software. O projeto demonstra minhas habilidades técnicas em IA Generativa e desenvolvimento fullstack através de uma interface moderna, responsiva e interativa.
 
-### `npm start`
+### ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎨 **Design Moderno**: Interface elegante com tema escuro e animações suaves
+- 📱 **Totalmente Responsivo**: Otimizado para todos os dispositivos
+- ⚡ **Performance**: Carregamento rápido e otimizado
+- 🎯 **Navegação Intuitiva**: Scroll suave entre seções
+- 🔧 **Tecnologias Atuais**: React 19, JavaScript ES6+, CSS3
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm test`
+- **Frontend**: React 19.0.0, React Router DOM, React Icons
+- **Estilização**: CSS3 com variáveis customizadas
+- **Deploy**: GitHub Pages
+- **Controle de Versão**: Git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🤖 Desenvolvimento com Inteligência Artificial
 
-### `npm run build`
+- **IA Generativa**: AWS Bedrock, Gemini AI, Desenvolvimento de Agents
+- **Integração de APIs de IA**: Conectividade entre aplicações e serviços de IA
+- **Desenvolvimento com IA**: Criação de aplicações que utilizam IA
+- **Automação com IA**: Agents e ferramentas para automação de processos
+- **Cloud AI**: AWS Bedrock, Google AI, Desenvolvimento de aplicações com IA
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Infraestrutura e Sistemas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **AWS**: EC2, RDS, ECS, CodePipeline, CodeCommit, Load Balancers
+- **Sistemas de Mensageria**: RabbitMQ, AWS SQS, Queue Systems
+- **Google Cloud**: Firebase, Firestore, App Scripts, Authentication
+- **DevOps**: Docker, Rancher, CI/CD, Elasticsearch
+- **Automação**: Pipelines de deploy, Gerenciamento de ambientes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📱 Desenvolvimento Mobile
 
-### `npm run eject`
+- **Flutter & Dart**: Desenvolvimento de aplicativos multiplataforma
+- **Integração com IA**: Aplicativos que utilizam IA para funcionalidades inteligentes
+- **Firebase**: Firestore, Authentication, Cloud Functions
+- **Google Sheets API**: Integração com planilhas para sincronização de dados
+- **Projeto Atual**: Controle Financeiro Inteligente com IA
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📋 Seções do Portfólio
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **🏠 Início**: Apresentação principal
+- **👨‍💻 Sobre Mim**: Minha história e experiência com IA
+- **🛠️ Habilidades**: Competências técnicas incluindo IA Generativa e desenvolvimento
+- **💼 Experiência**: Timeline da minha carreira com foco em desenvolvimento
+- **🚀 Projetos**: Realizações em IA, desenvolvimento e automação
+- **📞 Contato**: Formas de entrar em contato
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Como Executar
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Pré-requisitos
 
-## Learn More
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Instalação
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone o repositório:
+```bash
+git clone https://github.com/CrevoDev/portfolio.git
+cd portfolio
+```
 
-### Code Splitting
+2. Instale as dependências:
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Execute o projeto:
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+4. Acesse no navegador: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Scripts Disponíveis
 
-### Making a Progressive Web App
+- `npm start` - Executa o projeto em modo de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm run deploy` - Faz deploy para GitHub Pages
+- `npm test` - Executa os testes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Deploy
 
-### Advanced Configuration
+O projeto está hospedado no GitHub Pages e pode ser acessado em:
+**https://crevodev.github.io/portfolio/**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📱 Responsividade
 
-### Deployment
+O portfólio foi desenvolvido com foco na experiência mobile-first, garantindo uma navegação fluida em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- 📱 Dispositivos móveis (320px+)
+- 📱 Tablets (768px+)
+- 💻 Desktops (1024px+)
+- 🖥️ Telas grandes (1440px+)
 
-### `npm run build` fails to minify
+## 🎨 Design System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Cores
+- **Primária**: #4ac9be (Cyan)
+- **Secundária**: #23272f (Dark Blue)
+- **Background**: #181c23 (Dark)
+- **Texto**: #e6edf3 (Light Gray)
+
+### Tipografia
+- **Títulos**: Fira Mono (Monospace)
+- **Corpo**: Segoe UI, Tahoma, Geneva, Verdana
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📞 Contato
+
+**Cleverson Domingues Pedroso**
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/cleverson-pedroso-9a8226287)
+- 🐙 [GitHub](https://github.com/CrevoDev)
+- 📧 Email: [Entre em contato via LinkedIn](https://www.linkedin.com/in/cleverson-pedroso-9a8226287)
+
+---
+
+<div align="center">
+  <p>Desenvolvido com ❤️ por <strong>Cleverson Domingues Pedroso</strong></p>
+  <p>© 2025 - Todos os direitos reservados</p>
+</div>

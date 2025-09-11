@@ -1,0 +1,226 @@
+/* ========================================
+   RESPONSIVE DESIGN & MEDIA QUERIES
+   ======================================== */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background: #181c23;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .text-responsive {
+    font-size: 0.9rem;
+  }
+
+  .spacing-responsive {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm);
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .text-responsive {
+    font-size: 0.8rem;
+  }
+
+  .spacing-responsive {
+    padding: var(--spacing-xs);
+    margin: var(--spacing-xs);
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .text-responsive {
+    font-size: 0.7rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e6edf3;
+    --text-secondary: #8b949e;
+    --background-color: #0d1117;
+    --card-bg: #161b22;
+    --header-color: rgba(13, 17, 23, 0.95);
+    --border-color: #30363d;
+  }
+}
+
+/* Light Mode Support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #2d3748;
+    --text-secondary: #718096;
+    --background-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --header-color: rgba(255, 255, 255, 0.95);
+    --border-color: #e2e8f0;
+    --primary-color: #4299e1;
+    --link-hover-color: #63b3ed;
+    --accent-color: #63b3ed;
+  }
+  
+  body {
+    background-color: var(--background-color) !important;
+  }
+  
+  .App {
+    background-color: var(--background-color) !important;
+  }
+  
+  /* Ajustes específicos para modo claro */
+  section {
+    background: #f8fafc !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+  
+  .footer {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%) !important;
+  }
+  
+  /* Suavizar elementos específicos */
+  .contact-info-section,
+  .contact-form-section {
+    background: #f8fafc !important;
+    border: 1px solid rgba(66, 153, 225, 0.1) !important;
+  }
+  
+  .skill-category {
+    background: #f8fafc !important;
+    border: 1px solid rgba(66, 153, 225, 0.1) !important;
+  }
+  
+  .project-card {
+    background: #f8fafc !important;
+    border: 1px solid rgba(66, 153, 225, 0.1) !important;
+  }
+  
+  .timeline-item {
+    background: #f8fafc !important;
+  }
+  
+  .about-stats {
+    background: #f8fafc !important;
+  }
+  
+  .contact-info-item {
+    background: #f8fafc !important;
+  }
+  
+  .social-link {
+    background: #f8fafc !important;
+  }
+  
+  .footer-social-link {
+    background: #f8fafc !important;
+  }
+  
+  /* Inputs e formulários */
+  .form-group input,
+  .form-group textarea {
+    background: #ffffff !important;
+    border: 1px solid rgba(66, 153, 225, 0.2) !important;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background: #ffffff !important;
+    border: 1px solid var(--primary-color) !important;
+  }
+  
+  /* Botões */
+  .submit-button {
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+  }
+  
+  .project-link {
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+  }
+}

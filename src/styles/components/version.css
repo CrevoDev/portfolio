@@ -1,0 +1,93 @@
+/* ========================================
+   VERSION COMPONENT STYLES
+   ======================================== */
+
+.version-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(74, 201, 190, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(74, 201, 190, 0.1);
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.version-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.version-icon {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.version-label {
+  font-weight: 500;
+  min-width: 60px;
+}
+
+.version-value {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .version-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .version-item {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .version-label {
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .version-info {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .version-item {
+    justify-content: space-between;
+  }
+  
+  .version-label {
+    min-width: 45px;
+  }
+}
+
+/* Light Mode Support */
+@media (prefers-color-scheme: light) {
+  .version-info {
+    background: rgba(99, 179, 237, 0.05);
+    border-color: rgba(99, 179, 237, 0.1);
+  }
+  
+  .version-icon {
+    color: var(--primary-color);
+  }
+  
+  .version-value {
+    color: var(--primary-color);
+  }
+}

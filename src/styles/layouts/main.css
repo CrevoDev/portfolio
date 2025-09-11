@@ -1,0 +1,42 @@
+/* ========================================
+   MAIN LAYOUT STYLES
+   ======================================== */
+
+/* Main Container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 32px 24px 32px 24px;
+  transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Page Layout */
+.page-layout {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Footer styles moved to components/footer.css */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 18px 4px 18px 4px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 12px 2px;
+    gap: 12px;
+  }
+}

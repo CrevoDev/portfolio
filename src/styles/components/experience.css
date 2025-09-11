@@ -1,0 +1,324 @@
+/* ========================================
+   EXPERIENCE COMPONENT STYLES
+   ======================================== */
+
+/* Experience Container */
+.experience-container {
+  width: 100%;
+}
+
+/* Experience Intro */
+.experience-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.experience-intro h3 {
+  color: var(--primary-color);
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0 0 1.2rem 0;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.experience-intro p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-color), rgba(74, 201, 190, 0.3));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background: rgba(74, 201, 190, 0.03);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(74, 201, 190, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover {
+  background: rgba(74, 201, 190, 0.06);
+  border-color: rgba(74, 201, 190, 0.25);
+  transform: translateX(10px);
+  box-shadow: 0 4px 16px rgba(74, 201, 190, 0.15);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -3.5rem;
+  top: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--background-color);
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content {
+  width: 100%;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeline-title-section h4 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.timeline-company {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.25rem;
+}
+
+.timeline-period {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.timeline-location {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.8;
+  font-family: var(--font-sans);
+}
+
+.timeline-type {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 1rem 0;
+  font-family: var(--font-mono);
+  background: rgba(74, 201, 190, 0.1);
+  border: 1px solid rgba(74, 201, 190, 0.3);
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  font-family: var(--font-sans);
+}
+
+.timeline-achievements {
+  margin: 1.5rem 0;
+}
+
+.timeline-achievements h5 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.timeline-achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-achievements li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: var(--font-sans);
+}
+
+.timeline-achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.timeline-technologies {
+  margin: 1.5rem 0;
+}
+
+.timeline-technologies h5 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.4rem 0.8rem;
+  background: rgba(74, 201, 190, 0.08);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(74, 201, 190, 0.2);
+  font-family: var(--font-sans);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-tag:hover {
+  background: rgba(74, 201, 190, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(74, 201, 190, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    left: 1rem;
+  }
+
+  .timeline-item {
+    padding: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .timeline-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .timeline-title-section h4 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-company {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 0.75rem;
+  }
+
+  .timeline-item {
+    padding: 1rem;
+  }
+
+  .timeline-marker {
+    left: -2rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .timeline-title-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-company {
+    font-size: 0.9rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+
+  .timeline-achievements li {
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

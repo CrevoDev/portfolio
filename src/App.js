@@ -1,30 +1,22 @@
-import './App.css';
+// Import all CSS modules
+import './styles/index.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SectionListComponent from './components/SectionListComponent';
-import HeaderComponent from './components/HeaderComponent';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
 
+/**
+ * Componente principal da aplicação
+ * Segue o princípio Single Responsibility Principle (SRP)
+ * Responsável apenas pelo roteamento e estrutura geral
+ */
 function App() {
-  const sectionService = new (require('./services/SectionService').default)();
-  const sections = sectionService.getSections();
-  const sectionsHeader = sectionService.getSectionsHeader();
-
   return (
     <Router>
-      <div className="App">
-        <HeaderComponent sectionsHeader={sectionsHeader} />
-
+      <MainLayout>
         <Routes>
-          <Route path="/portfolio/" element={
-            <main>
-              <SectionListComponent sections={sections} />
-            </main>
-          } />
+          <Route path="/portfolio/" element={<HomePage />} />
         </Routes>
-
-        <footer>
-          <p>&copy; 2025 Cleverson Domingues Pedroso</p>
-        </footer>
-      </div>
+      </MainLayout>
     </Router>
   );
 }
