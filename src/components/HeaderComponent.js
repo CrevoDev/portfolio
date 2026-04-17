@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaHome, FaUser, FaComments, FaBars } from "react-icons/fa";
-import { updateActiveNavigation } from "../utils/scrollUtils";
 
 export default function HeaderComponent({ 
     sectionsHeader, 

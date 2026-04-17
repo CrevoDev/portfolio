@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaRocket, FaUsers } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaRocket } from 'react-icons/fa';
 
 const projectsData = [
     {

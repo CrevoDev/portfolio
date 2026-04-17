@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTimes, FaHome, FaUser, FaWrench, FaBriefcase, FaTrophy, FaComments } from 'react-icons/fa';
+import { FaTimes, FaUser, FaWrench, FaBriefcase, FaTrophy, FaComments } from 'react-icons/fa';
 
 export default function SidebarComponent({ isOpen, onClose, sections }) {
     const sidebarItems = [
