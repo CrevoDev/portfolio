@@ -16,11 +16,12 @@ export default function AboutMeComponent() {
                         <FaCode />
                     </div>
                     <div className="about-text">
-                        <h4>💼 Atualmente na Docato</h4>
+                        <h4>💼 Atualmente na Hrestart</h4>
                         <p>
-                            Lidero o desenvolvimento e manutenção de aplicativos de <strong>Inteligência Artificial</strong>, utilizando
-                            <strong> AWS Bedrock, Python, JavaScript, TypeScript, Angular, Node.js e NestJS</strong>.
-                            Trabalho com <strong>IA Generativa</strong> e automação de processos jurídicos com tecnologias de ponta.
+                            Atuo como <strong>Desenvolvedor Fullstack</strong> no desenvolvimento e melhoria da plataforma em
+                            <strong> Angular</strong>, utilizando o ecossistema completo do <strong>Google Cloud Platform (GCP)</strong>:
+                            Cloud Functions, Cloud Run, Vertex AI e Cloud Vision.
+                            Trabalho com <strong>leitura de documentos por IA</strong> e integração de serviços de IA generativa no backend com <strong>NestJS</strong>.
                         </p>
                     </div>
                 </div>

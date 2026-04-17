@@ -6,9 +6,26 @@ export default function ExperienceComponent() {
         {
             type: 'work',
             icon: <FaBriefcase />,
+            title: 'Desenvolvedor Fullstack',
+            company: 'Hrestart',
+            period: '2026 - Presente',
+            location: 'Remoto',
+            description: 'Desenvolvimento e correção da plataforma em Angular com stack completo no Google Cloud Platform, incluindo serviços de IA para leitura de documentos',
+            achievements: [
+                'Desenvolvimento e manutenção da plataforma frontend em Angular',
+                'Integração com serviços GCP: Cloud Functions, Cloud Run, Vertex AI e Cloud Vision',
+                'Implementação de leitura e análise de documentos com IA',
+                'Backend com NestJS integrado ao ecossistema Google Cloud',
+                'Automação de processos com IA Generativa via Vertex AI'
+            ],
+            technologies: ['Angular', 'NestJS', 'TypeScript', 'GCP', 'Cloud Functions', 'Cloud Run', 'Vertex AI', 'Cloud Vision', 'Node.js']
+        },
+        {
+            type: 'work',
+            icon: <FaBriefcase />,
             title: 'Desenvolvedor Fullstack & Desenvolvedor com IA',
             company: 'Docato',
-            period: '2023 - Presente',
+            period: '2023 - 2025',
             location: 'Remoto',
             description: 'Desenvolvimento e manutenção de aplicativos com integração de IA para automação de processos jurídicos',
             achievements: [
