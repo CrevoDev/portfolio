@@ -18,9 +18,9 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        
+
     - name: 📥 Install Dependencies
-      run: npm ci
+      run: npm install
       
     - name: 🔄 Update Version
       run: npm run version
