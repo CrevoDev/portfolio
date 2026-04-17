@@ -18,8 +18,8 @@ const projectsData = [
             'Automação de categorização de gastos com Gemini AI',
             'Geração de insights e relatórios financeiros'
         ],
-        githubUrl: null,
-        githubTag: 'REPOSITÓRIO PRIVADO',
+        githubUrl: 'https://github.com/CrevoDev/money_gestor_app',
+        githubTag: null,
         liveUrl: null,
         year: '2024',
         icon: '📱'
@@ -98,8 +98,8 @@ const projectsData = [
             'Processamento de milhares de documentos por dia',
             'Criação de agents inteligentes para automação de processos'
         ],
-        githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubUrl: 'https://github.com/CrevoDev/ia-class',
+        githubTag: null,
         liveUrl: null,
         year: '2023',
         icon: '🤖'
@@ -155,8 +155,8 @@ const projectsData = [
             'Interface intuitiva e responsiva',
             'Funcionalidades completas de gestão'
         ],
-        githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubUrl: 'https://github.com/CrevoDev/market-list',
+        githubTag: null,
         liveUrl: null,
         year: '2023',
         icon: '📱'

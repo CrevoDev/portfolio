@@ -36,8 +36,8 @@ export const PORTFOLIO_CONFIG = {
 };
 
 export const SOCIAL_LINKS = {
-  LINKEDIN: 'https://linkedin.com/in/cleverson-pedroso',
-  GITHUB: 'https://github.com/cleverson-pedroso',
+  LINKEDIN: 'https://www.linkedin.com/in/cleverson-pedroso-9a8226287',
+  GITHUB: 'https://github.com/CrevoDev',
   WHATSAPP: 'https://wa.me/5542998755280'
 };
 
