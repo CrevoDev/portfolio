@@ -1,7 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaRocket } from 'react-icons/fa';
+import CodeSampleModal from './CodeSampleModal';
+import { samplesById } from '../samples/index';
 
 const projectsData = [
+    {
+        id: 'devflow',
+        title: 'DevFlow - Gestão para Freelancers',
+        description: 'Plataforma de gestão de projetos para freelancers com kanban, propostas em PDF, controle de pagamentos, Copilot com IA e portal do cliente com chat e briefing.',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop&q=80',
+        category: 'Fullstack & IA',
+        status: 'Em Desenvolvimento',
+        technologies: ['Angular 20', 'TypeScript', 'Tailwind', 'Signals', 'Firebase', 'Firestore', 'Cloud Functions', 'Playwright', 'Vitest'],
+        achievements: [
+            'Kanban com precificação por etapa',
+            'Copilot contextual com atalhos (/criar, /propor, /precificar)',
+            'Portal do cliente tokenizado com IA',
+            'Inbox da equipe integrada',
+            'Testes e2e com Playwright'
+        ],
+        githubUrl: 'https://github.com/CrevoDev/devflow',
+        githubTag: null,
+        liveUrl: null,
+        year: '2026',
+        icon: '🧭'
+    },
     {
         id: 'projeto1',
         title: 'Controle Financeiro Inteligente',
@@ -40,7 +63,8 @@ const projectsData = [
             'Redução de 80% no tempo de processamento de documentos'
         ],
         githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubTag: null,
+        sampleId: 'bedrock-ia',
         liveUrl: null,
         year: '2023-2024',
         icon: '🤖'
@@ -59,7 +83,8 @@ const projectsData = [
             'Redução significativa de custos operacionais'
         ],
         githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubTag: null,
+        sampleId: 'report-queue',
         liveUrl: null,
         year: '2023',
         icon: '📈'
@@ -78,7 +103,8 @@ const projectsData = [
             'Melhoria na performance geral do sistema'
         ],
         githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubTag: null,
+        sampleId: 'legacy-angular',
         liveUrl: null,
         year: '2022',
         icon: '⚙️'
@@ -118,7 +144,8 @@ const projectsData = [
             'Redução de 90% no tempo de preenchimento'
         ],
         githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubTag: null,
+        sampleId: 'browser-ext',
         liveUrl: null,
         year: '2022',
         icon: '🧩'
@@ -137,7 +164,8 @@ const projectsData = [
             'Melhoria significativa na comunicação'
         ],
         githubUrl: null,
-        githubTag: 'REPOSITÓRIO EM BREVE',
+        githubTag: null,
+        sampleId: 'chat-realtime',
         liveUrl: null,
         year: '2023',
         icon: '💬'
@@ -163,12 +191,13 @@ const projectsData = [
     }
 ];
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, onOpenSample }) {
     const getCategoryColor = (category) => {
         switch (category) {
             case 'Backend': return '#4ac9be';
             case 'Frontend': return '#61DAFB';
             case 'Fullstack': return '#FF9500';
+            case 'Fullstack & IA': return '#7fffd4';
             case 'IA/ML': return '#9C27B0';
             case 'Mobile': return '#25D366';
             case 'Mobile & IA': return '#7fffd4';
@@ -243,12 +272,16 @@ function ProjectCard({ project, index }) {
                             <FaGithub />
                             Código
                         </a>
-                    ) : (
-                        <span className="project-tag">
-                            <FaGithub />
-                            {project.githubTag}
-                        </span>
-                    )}
+                    ) : project.sampleId ? (
+                        <button
+                            type="button"
+                            className="project-link project-link-button"
+                            onClick={() => onOpenSample(project.sampleId)}
+                        >
+                            <FaCode />
+                            Ver amostra
+                        </button>
+                    ) : null}
                     {project.liveUrl && (
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
                             <FaExternalLinkAlt />
@@ -262,6 +295,8 @@ function ProjectCard({ project, index }) {
 }
 
 export default function RealizationsComponent() {
+    const [openSampleId, setOpenSampleId] = useState(null);
+
     useEffect(() => {
         if (window.innerWidth <= 768) {
             document.querySelectorAll('.project-card').forEach((el) => {
@@ -292,6 +327,8 @@ export default function RealizationsComponent() {
         return () => observer.disconnect();
     }, []);
 
+    const openSample = openSampleId ? samplesById[openSampleId] : null;
+
     return (
         <div className="realizations-container">
             <div className="realizations-intro">
@@ -301,9 +338,19 @@ export default function RealizationsComponent() {
 
             <div className="projects-grid">
                 {projectsData.map((project, index) => (
-                    <ProjectCard key={project.id} project={project} index={index} />
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                        index={index}
+                        onOpenSample={setOpenSampleId}
+                    />
                 ))}
             </div>
+
+            <CodeSampleModal
+                sample={openSample}
+                onClose={() => setOpenSampleId(null)}
+            />
         </div>
     );
 }

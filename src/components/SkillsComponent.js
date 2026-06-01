@@ -178,6 +178,7 @@ export default function SkillsComponent() {
             <div className="skills-intro">
                 <h3>🛠️ Habilidades Técnicas</h3>
                 <p>Minhas competências e tecnologias que utilizo</p>
+                <p className="skills-legend">Os níveis refletem experiência prática em projetos reais, não apenas familiaridade teórica.</p>
             </div>
 
             <div className="skills-filter">

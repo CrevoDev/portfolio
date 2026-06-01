@@ -17,3 +17,4 @@ import './components/projects.css';
 import './components/contact.css';
 import './components/footer.css';
 import './components/version.css';
+import './components/codeSample.css';

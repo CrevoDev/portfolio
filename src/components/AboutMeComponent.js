@@ -94,8 +94,26 @@ export default function AboutMeComponent() {
                     <span className="stat-label">Projetos Desenvolvidos</span>
                 </div>
                 <div className="stat-item">
-                    <span className="stat-number">5+</span>
+                    <span className="stat-number">20+</span>
                     <span className="stat-label">Tecnologias Dominadas</span>
+                </div>
+            </div>
+
+            <div className="impact-metrics">
+                <h4>📊 Métricas de Impacto</h4>
+                <div className="impact-metrics-grid">
+                    <div className="impact-metric-item">
+                        <span className="impact-metric-value">-80%</span>
+                        <span className="impact-metric-label">Tempo de processamento de documentos</span>
+                    </div>
+                    <div className="impact-metric-item">
+                        <span className="impact-metric-value">99%</span>
+                        <span className="impact-metric-label">Eficiência na classificação de PDFs</span>
+                    </div>
+                    <div className="impact-metric-item">
+                        <span className="impact-metric-value">-60%</span>
+                        <span className="impact-metric-label">Tempo de geração de relatórios</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -266,6 +266,62 @@ section#projetos {
   font-weight: 500;
 }
 
+.impact-metrics {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(74, 201, 190, 0.15);
+}
+
+.impact-metrics h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-family: var(--font-mono);
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.impact-metrics-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.impact-metric-item {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  background: rgba(127, 255, 212, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(127, 255, 212, 0.2);
+  min-width: 200px;
+  max-width: 240px;
+  flex: 1 1 200px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.impact-metric-item:hover {
+  background: rgba(127, 255, 212, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 255, 212, 0.15);
+}
+
+.impact-metric-value {
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  display: block;
+}
+
+.impact-metric-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  font-family: var(--font-sans);
+  display: block;
+  line-height: 1.4;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {

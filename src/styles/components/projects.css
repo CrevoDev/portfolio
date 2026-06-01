@@ -322,6 +322,12 @@
   box-shadow: 0 4px 16px rgba(74, 201, 190, 0.4);
 }
 
+.project-link-button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .project-tag {
   display: inline-flex;
   align-items: center;

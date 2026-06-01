@@ -1,0 +1,190 @@
+/* ========================================
+   CODE SAMPLE MODAL STYLES
+   ======================================== */
+
+.code-sample-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.code-sample-modal {
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow), var(--accent-glow);
+  overflow: hidden;
+}
+
+.code-sample-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(74, 201, 190, 0.05);
+}
+
+.code-sample-header h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-family: var(--font-mono);
+  margin: 0 0 0.4rem 0;
+}
+
+.code-sample-summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.code-sample-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.code-sample-close:hover {
+  color: var(--text-color);
+  border-color: var(--primary-color);
+  background: rgba(74, 201, 190, 0.1);
+}
+
+.code-sample-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.code-sample-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.code-sample-tab.active {
+  color: var(--primary-color);
+  background: rgba(74, 201, 190, 0.08);
+  border-color: var(--border-color);
+}
+
+.code-sample-tab:hover:not(.active) {
+  color: var(--text-color);
+}
+
+.code-sample-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.code-sample-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.code-sample-filename {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.code-sample-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(74, 201, 190, 0.3);
+  border-radius: var(--border-radius-sm);
+  background: rgba(74, 201, 190, 0.1);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.code-sample-copy:hover {
+  background: rgba(74, 201, 190, 0.2);
+  border-color: var(--primary-color);
+}
+
+.code-sample-pre {
+  flex: 1;
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+  background: #0a0e14;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  max-height: 50vh;
+}
+
+.code-sample-pre code {
+  display: block;
+  color: #c9d1d9;
+  font-family: var(--font-family-primary);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+@media (max-width: 768px) {
+  .code-sample-overlay {
+    padding: 1rem;
+  }
+
+  .code-sample-modal {
+    max-height: 90vh;
+  }
+
+  .code-sample-header {
+    padding: 1rem;
+  }
+
+  .code-sample-body {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .code-sample-pre {
+    max-height: 45vh;
+    font-size: 0.75rem;
+  }
+}
