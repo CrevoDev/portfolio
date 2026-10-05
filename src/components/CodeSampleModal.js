@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { FaTimes, FaCopy, FaCheck } from 'react-icons/fa';
+import { useLang } from '../i18n';
 
 export default function CodeSampleModal({ sample, onClose }) {
+    const { t } = useLang();
     const [activeFileIndex, setActiveFileIndex] = useState(0);
     const [copied, setCopied] = useState(false);
 
@@ -35,6 +37,7 @@ export default function CodeSampleModal({ sample, onClose }) {
     if (!sample) return null;
 
     const activeFile = sample.files[activeFileIndex];
+    const [title, summary] = t.sample.titles[sample.id] ?? [sample.title, sample.summary];
 
     const handleCopy = async () => {
         try {
@@ -66,14 +69,14 @@ export default function CodeSampleModal({ sample, onClose }) {
             >
                 <div className="code-sample-header">
                     <div>
-                        <h3 id="code-sample-title">{sample.title}</h3>
-                        <p className="code-sample-summary">{sample.summary}</p>
+                        <h3 id="code-sample-title">{title}</h3>
+                        <p className="code-sample-summary">{summary}</p>
                     </div>
                     <button
                         type="button"
                         className="code-sample-close"
                         onClick={handleClose}
-                        aria-label="Fechar amostra de código"
+                        aria-label={t.sample.close}
                     >
                         <FaTimes />
                     </button>
@@ -108,7 +111,7 @@ export default function CodeSampleModal({ sample, onClose }) {
                             onClick={handleCopy}
                         >
                             {copied ? <FaCheck /> : <FaCopy />}
-                            {copied ? 'Copiado!' : 'Copiar'}
+                            {copied ? t.sample.copied : t.sample.copy}
                         </button>
                     </div>
                     <pre className="code-sample-pre">
