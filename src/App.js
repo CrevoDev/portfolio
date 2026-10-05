@@ -1,24 +1,31 @@
-// Import all CSS modules
-import './styles/index.js';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/HomePage';
+import './styles.css';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Metrics from './components/Metrics';
+import About from './components/About';
+import Marquee from './components/Marquee';
+import Stack from './components/Stack';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import { LangProvider } from './i18n';
 
-/**
- * Componente principal da aplicação
- * Segue o princípio Single Responsibility Principle (SRP)
- * Responsável apenas pelo roteamento e estrutura geral
- */
-function App() {
+export default function App() {
   return (
-    <Router>
-      <MainLayout>
-        <Routes>
-          <Route path="/portfolio/" element={<HomePage />} />
-        </Routes>
-      </MainLayout>
-    </Router>
+    <LangProvider>
+      <div className="page">
+        <Nav />
+        <main>
+          <Hero />
+          <Metrics />
+          <About />
+          <Marquee />
+          <Stack />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </LangProvider>
   );
 }
-
-export default App;
