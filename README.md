@@ -37,14 +37,7 @@ Usa [GoatCounter](https://www.goatcounter.com) (gratuito, sem cookies e sem dado
 
 1. Crie uma conta no GoatCounter e escolha o código do site (ex.: `crevodev`).
 2. No GitHub: Settings > Secrets and variables > Actions > Variables > nova variável `GOATCOUNTER_URL` com `https://crevodev.goatcounter.com/count`.
-3. No `.github/workflows/deploy.yml`, passe a variável ao passo de build:
-   ```yaml
-   - name: 🏗️ Build
-     run: npm run build
-     env:
-       REACT_APP_GOATCOUNTER_URL: ${{ vars.GOATCOUNTER_URL }}
-   ```
-4. Faça um novo deploy. As visitas aparecem em `https://crevodev.goatcounter.com`.
+3. Faça um novo deploy (o `deploy.yml` já repassa a variável ao build). As visitas aparecem em `https://crevodev.goatcounter.com`.
 
 Para testar localmente com o build de produção: `REACT_APP_GOATCOUNTER_URL=... npm run build`.
 

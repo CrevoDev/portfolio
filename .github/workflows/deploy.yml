@@ -30,7 +30,10 @@ jobs:
       
     - name: 🏗️ Build
       run: npm run build
-      
+      env:
+        # Variável do repositório (Settings > Variables). Vazia = sem contagem de visitas.
+        REACT_APP_GOATCOUNTER_URL: ${{ vars.GOATCOUNTER_URL }}
+
     - name: 🚀 Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
